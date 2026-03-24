@@ -1,0 +1,73 @@
+📌 What is Wireshark?
+Wireshark is a network protocol analyzer used to capture and analyze packets in real-time or from saved files (PCAP).
+
+⚠️ Important Points
+❌ Not an IDS (Intrusion Detection System)
+❌ Does NOT modify packets
+✅ Only captures & analyzes traffic
+✅ Requires manual analysis
+
+🎯 Use Cases
+🔍 Network troubleshooting
+🔐 Security analysis
+📚 Protocol learning
+
+📦 PCAP File
+PCAP (Packet Capture) is a file format used to store captured network traffic.
+
+🖥️ Wireshark GUI Components
+Toolbar → Start/Stop capture
+Display Filter Bar → Apply filters
+Packet List Pane → Packet summary
+Packet Details Pane → Protocol breakdown
+Packet Bytes Pane → Hex + ASCII view
+Status Bar → Packet count & interface
+
+🎨 Packet Coloring
+Helps identify protocols quickly
+Two types:
+Temporary rules
+Permanent rules
+
+📡 Packet Sniffing
+▶️ Start → Blue button
+⛔ Stop → Red button
+🔄 Restart → Green button
+
+🔍 Filters
+📌 Display Filters
+Used after capture
+http
+ip.addr == 192.168.1.1
+tcp.port == 80
+
+📌 Capture Filters
+Used before capture
+port 80
+host 192.168.1.1
+
+⚔️ Capture vs Display Filter
+Feature	Capture Filter	Display Filter
+Applied	Before capture	After capture
+Purpose	Reduce data	Filter view
+Example	port 80	http
+
+🧠 Core Concepts
+📦 Packet-Small unit of data transmitted over network
+🌐 Protocol-Rules for communication (HTTP, TCP, DNS)
+📡 Packet Sniffing-Capturing network traffic
+🔌 Network Interface-Connection point (eth0, ens33, lo)
+
+🔐 Security Concepts
+❓ Can Wireshark detect attacks?
+❌ No (manual analysis required)
+
+❓ Can it decrypt HTTPS?
+✅ Yes (if TLS keys available)
+
+❓ Can it modify traffic?
+❌ No
+
+🧩 Modes
+Promiscuous Mode-Captures all packets in the network
+
